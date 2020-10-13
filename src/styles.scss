@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$custom-typography: mat-typography-config(
+  $font-family: 'sofia-pro'
+);
+
+$custom-blue: (
+  50 : #eaf6f8,
+  100 : #c9eaed,
+  200 : #a6dce2,
+  300 : #82cdd6,
+  400 : #67c3cd,
+  500 : #4cb8c4,
+  600 : #45b1be,
+  700 : #3ca8b6,
+  800 : #33a0af,
+  900 : #2491a2,
+  A100 : #dffaff,
+  A200 : #acf3ff,
+  A400 : #79ecff,
+  A700 : #5fe9ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$prowork-primary: mat-palette($custom-blue);
+$prowork-accent: mat-palette($mat-pink, A200, A100, A400);
+
+
+
+$prowork-warn: mat-palette($mat-red);
+
+
+$prowork-theme: mat-dark-theme((
+  color: (
+    primary: $prowork-primary,
+    accent: $prowork-accent,
+    warn: $prowork-warn,
+  )
+));
+
+
+@include angular-material-theme($prowork-theme);
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
