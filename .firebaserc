@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "prowork-df19e": {
+      "hosting": {
+        "prowork": [
+          "prowork-df19e"
+        ]
+      }
+    }
+  }
+}
