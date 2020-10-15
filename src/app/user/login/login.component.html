@@ -6,6 +6,9 @@
       <img src="/assets/google-logo.svg"/> Login with Google
     </button>
 
+    <h4> OR </h4>
+
+    <app-email></app-email>
   </div>
 
   <div *ngIf="angularFireAuth.authState | async as user" class="logout">
@@ -13,6 +16,6 @@
       Logged in as <strong>{{ user.email }}</strong>
     </p>
 
-    <button mat-stroked-button (click)="angularFireAuth.auth.signOut()">Logout</button>
+    <button mat-stroked-button (click)="angularFireAuth.signOut()">Logout</button>
   </div>
 </main>
